@@ -1,0 +1,39 @@
+{
+    "name": "elnooronline/laravel-locales",
+    "description": "The package used to support multi locales in your application.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmed Aliraqi",
+            "email": "aliraqi.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.5.*|5.6.*|5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elnooronline\\LaravelLocales\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elnooronline\\LaravelLocales\\Providers\\LocalesServiceProvider"
+            ],
+            "aliases": {
+                "Locales": "Elnooronline\\LaravelLocales\\Facades\\Locales"
+            }
+        }
+    }
+}
