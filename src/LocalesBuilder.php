@@ -60,7 +60,7 @@ class LocalesBuilder
      */
     private function setLocales()
     {
-        $supportedLocales = $this->app['config']->get('locales');
+        $supportedLocales = $this->app['config']->get('locales.languages');
 
         $locales = [];
         foreach ($supportedLocales as $code => $locale) {

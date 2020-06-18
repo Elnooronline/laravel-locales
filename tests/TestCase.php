@@ -13,23 +13,25 @@ class TestCase extends OrchestraTestCase
      *
      * @return void
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
         $this->app['config']->set([
             'locales' => [
-                'en' => [
-                    'code' => 'en',
-                    'name' => 'English',
-                    'dir' => 'ltr',
-                    'flag' => '/images/flages/us.png'
-                ],
-                'ar' => [
-                    'code' => 'ar',
-                    'name' => 'العربية',
-                    'dir' => 'rtl',
-                    'flag' => '/images/flages/sa.png'
+                'languages' => [
+                    'en' => [
+                        'code' => 'en',
+                        'name' => 'English',
+                        'dir' => 'ltr',
+                        'flag' => '/images/flages/us.png'
+                    ],
+                    'ar' => [
+                        'code' => 'ar',
+                        'name' => 'العربية',
+                        'dir' => 'rtl',
+                        'flag' => '/images/flages/sa.png'
+                    ],
                 ],
             ]
         ]);
