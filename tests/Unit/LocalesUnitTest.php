@@ -24,13 +24,13 @@ class LocalesUnitTest extends TestCase
         $this->assertEquals(Locales::current()->code, 'en');
         $this->assertEquals(Locales::current()->name, 'English');
         $this->assertEquals(Locales::current()->dir, 'ltr');
-        $this->assertEquals(Locales::current()->flag, '/images/flages/us.png');
+        $this->assertEquals(Locales::current()->flag, '/images/flags/us.png');
 
         $this->app->setLocale('ar');
         $this->assertEquals(Locales::current()->code, 'ar');
         $this->assertEquals(Locales::current()->name, 'العربية');
         $this->assertEquals(Locales::current()->dir, 'rtl');
-        $this->assertEquals(Locales::current()->flag, '/images/flages/sa.png');
+        $this->assertEquals(Locales::current()->flag, '/images/flags/sa.png');
     }
     /** @test */
     public function it_can_set_the_application_locale()
@@ -50,12 +50,12 @@ class LocalesUnitTest extends TestCase
         $this->assertEquals(Locales::getCode(), 'ar');
         $this->assertEquals(Locales::getName(), 'العربية');
         $this->assertEquals(Locales::getDir(), 'rtl');
-        $this->assertEquals(Locales::getFlag(), '/images/flages/sa.png');
+        $this->assertEquals(Locales::getFlag(), '/images/flags/sa.png');
 
         Locales::set('en');
         $this->assertEquals(Locales::getCode(), 'en');
         $this->assertEquals(Locales::getName(), 'English');
         $this->assertEquals(Locales::getDir(), 'ltr');
-        $this->assertEquals(Locales::getFlag(), '/images/flages/us.png');
+        $this->assertEquals(Locales::getFlag(), '/images/flags/us.png');
     }
 }
