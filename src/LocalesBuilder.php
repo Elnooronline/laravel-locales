@@ -63,8 +63,10 @@ class LocalesBuilder
         $supportedLocales = $this->app['config']->get('locales.languages');
 
         $locales = [];
-        foreach ($supportedLocales as $code => $locale) {
-            $locales[$code] = (object)$locale;
+        if (is_array($supportedLocales)) {
+            foreach ($supportedLocales as $code => $locale) {
+                $locales[$code] = (object)$locale;
+            }
         }
 
         return $locales;
