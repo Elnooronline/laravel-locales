@@ -1,3 +1,5 @@
+**This package has been deprecated. But worry not. You can use [laraeast/laravel-locales](https://github.com/laraeast/laravel-locales)**
+
 # Laravel Multi Locales Package
 
 > The package used to support multi locales in your application.
